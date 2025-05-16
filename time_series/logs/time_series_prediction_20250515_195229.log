@@ -1,0 +1,339 @@
+2025-05-15 19:52:29,368 - time_series - INFO - 开始运行时间序列预测系统
+2025-05-15 19:52:29,368 - time_series - INFO - 日志文件: time_series/logs\time_series_prediction_20250515_195229.log
+2025-05-15 19:52:29,369 - data_utils - INFO - 正在加载数据集: time_series\北京-逐日.xlsx
+2025-05-15 19:52:30,743 - data_utils - INFO - 数据集加载成功，形状: (27814, 3)
+2025-05-15 19:52:30,748 - data_utils - INFO - 提取的AQI数据形状: (27814,)
+2025-05-15 19:52:30,768 - data_utils - INFO - 创建的序列形状: X=(27807, 7), y=(27807,)
+2025-05-15 19:52:30,768 - data_utils - INFO - 训练集形状: X=(19464, 7), y=(19464,)
+2025-05-15 19:52:30,769 - data_utils - INFO - 验证集形状: X=(2780, 7), y=(2780,)
+2025-05-15 19:52:30,769 - data_utils - INFO - 测试集形状: X=(5563, 7), y=(5563,)
+2025-05-15 19:52:30,769 - data_processor - INFO - 数据处理器初始化，序列长度: 7, 批次大小: 32
+2025-05-15 19:52:30,769 - time_series - INFO - ==================================================
+2025-05-15 19:52:30,769 - time_series - INFO - 开始LSTM模型训练和预测
+2025-05-15 19:52:30,797 - data_processor - INFO - PyTorch数据准备完成
+2025-05-15 19:52:30,798 - data_processor - INFO - 训练批次数: 609
+2025-05-15 19:52:30,798 - data_processor - INFO - 验证批次数: 87
+2025-05-15 19:52:30,798 - data_processor - INFO - 测试批次数: 174
+2025-05-15 19:52:37,304 - lstm_model - INFO - LSTM模型初始化，设备: cuda
+2025-05-15 19:52:37,304 - lstm_model - INFO - 模型结构: 输入大小=1, 隐藏大小=64, 层数=2
+2025-05-15 19:52:37,304 - lstm_model - INFO - 开始训练LSTM模型，总共20个周期
+2025-05-15 19:52:39,948 - lstm_model - INFO - 周期 1/20, 训练损失: 0.003026, 验证损失: 0.001871
+2025-05-15 19:52:39,956 - lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:52:41,686 - lstm_model - INFO - 周期 2/20, 训练损失: 0.001107, 验证损失: 0.001217
+2025-05-15 19:52:41,689 - lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:52:43,501 - lstm_model - INFO - 周期 3/20, 训练损失: 0.000896, 验证损失: 0.001188
+2025-05-15 19:52:43,503 - lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:52:45,321 - lstm_model - INFO - 周期 4/20, 训练损失: 0.000832, 验证损失: 0.001163
+2025-05-15 19:52:45,323 - lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:52:47,200 - lstm_model - INFO - 周期 5/20, 训练损失: 0.000854, 验证损失: 0.001119
+2025-05-15 19:52:47,202 - lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:52:48,968 - lstm_model - INFO - 周期 6/20, 训练损失: 0.000837, 验证损失: 0.001092
+2025-05-15 19:52:48,970 - lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:52:50,807 - lstm_model - INFO - 周期 7/20, 训练损失: 0.000828, 验证损失: 0.001058
+2025-05-15 19:52:50,809 - lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:52:52,787 - lstm_model - INFO - 周期 8/20, 训练损失: 0.000811, 验证损失: 0.001103
+2025-05-15 19:52:54,672 - lstm_model - INFO - 周期 9/20, 训练损失: 0.000801, 验证损失: 0.001159
+2025-05-15 19:52:56,550 - lstm_model - INFO - 周期 10/20, 训练损失: 0.000790, 验证损失: 0.001050
+2025-05-15 19:52:56,552 - lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:52:58,261 - lstm_model - INFO - 周期 11/20, 训练损失: 0.000791, 验证损失: 0.001105
+2025-05-15 19:52:59,979 - lstm_model - INFO - 周期 12/20, 训练损失: 0.000790, 验证损失: 0.001037
+2025-05-15 19:52:59,981 - lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:01,805 - lstm_model - INFO - 周期 13/20, 训练损失: 0.000783, 验证损失: 0.001046
+2025-05-15 19:53:03,611 - lstm_model - INFO - 周期 14/20, 训练损失: 0.000780, 验证损失: 0.001174
+2025-05-15 19:53:05,513 - lstm_model - INFO - 周期 15/20, 训练损失: 0.000783, 验证损失: 0.001075
+2025-05-15 19:53:07,410 - lstm_model - INFO - 周期 16/20, 训练损失: 0.000775, 验证损失: 0.001066
+2025-05-15 19:53:09,225 - lstm_model - INFO - 周期 17/20, 训练损失: 0.000770, 验证损失: 0.001081
+2025-05-15 19:53:11,047 - lstm_model - INFO - 周期 18/20, 训练损失: 0.000783, 验证损失: 0.001068
+2025-05-15 19:53:12,812 - lstm_model - INFO - 周期 19/20, 训练损失: 0.000763, 验证损失: 0.001175
+2025-05-15 19:53:14,677 - lstm_model - INFO - 周期 20/20, 训练损失: 0.000774, 验证损失: 0.001090
+2025-05-15 19:53:14,700 - lstm_model - INFO - 训练完成，已加载最佳模型
+2025-05-15 19:53:14,889 - evaluation - INFO - 模型 LSTM 评估结果:
+2025-05-15 19:53:14,890 - evaluation - INFO - RMSE: 9.1090
+2025-05-15 19:53:14,890 - evaluation - INFO - MAE: 5.9583
+2025-05-15 19:53:14,890 - evaluation - INFO - R²: 0.9526
+2025-05-15 19:53:14,891 - evaluation - INFO - MAPE: 16.8204%
+2025-05-15 19:53:14,891 - evaluation - INFO - 执行时间: 37.3964 秒
+2025-05-15 19:53:15,834 - time_series - INFO - LSTM模型完成，评估结果: RMSE=9.1090, MAE=5.9583
+2025-05-15 19:53:15,834 - time_series - INFO - ==================================================
+2025-05-15 19:53:15,834 - time_series - INFO - 开始CNN模型训练和预测
+2025-05-15 19:53:15,835 - data_processor - INFO - PyTorch数据准备完成
+2025-05-15 19:53:15,835 - data_processor - INFO - 训练批次数: 609
+2025-05-15 19:53:15,836 - data_processor - INFO - 验证批次数: 87
+2025-05-15 19:53:15,836 - data_processor - INFO - 测试批次数: 174
+2025-05-15 19:53:15,839 - cnn_model - INFO - CNN模型初始化，设备: cuda
+2025-05-15 19:53:15,839 - cnn_model - INFO - 模型结构: 输入通道=1, 序列长度=7
+2025-05-15 19:53:15,839 - cnn_model - INFO - 开始训练CNN模型，总共20个周期
+2025-05-15 19:53:19,628 - cnn_model - INFO - 周期 1/20, 训练损失: 0.003405, 验证损失: 0.002408
+2025-05-15 19:53:19,631 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:21,280 - cnn_model - INFO - 周期 2/20, 训练损失: 0.001260, 验证损失: 0.002331
+2025-05-15 19:53:21,282 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:22,898 - cnn_model - INFO - 周期 3/20, 训练损失: 0.001131, 验证损失: 0.001800
+2025-05-15 19:53:22,901 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:24,584 - cnn_model - INFO - 周期 4/20, 训练损失: 0.001074, 验证损失: 0.001675
+2025-05-15 19:53:24,586 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:26,193 - cnn_model - INFO - 周期 5/20, 训练损失: 0.001026, 验证损失: 0.001775
+2025-05-15 19:53:27,780 - cnn_model - INFO - 周期 6/20, 训练损失: 0.000979, 验证损失: 0.001552
+2025-05-15 19:53:27,782 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:29,307 - cnn_model - INFO - 周期 7/20, 训练损失: 0.000986, 验证损失: 0.001520
+2025-05-15 19:53:29,308 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:30,926 - cnn_model - INFO - 周期 8/20, 训练损失: 0.000950, 验证损失: 0.001474
+2025-05-15 19:53:30,929 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:32,504 - cnn_model - INFO - 周期 9/20, 训练损失: 0.000940, 验证损失: 0.001429
+2025-05-15 19:53:32,505 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:34,104 - cnn_model - INFO - 周期 10/20, 训练损失: 0.000911, 验证损失: 0.001501
+2025-05-15 19:53:35,723 - cnn_model - INFO - 周期 11/20, 训练损失: 0.000894, 验证损失: 0.001381
+2025-05-15 19:53:35,725 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:37,395 - cnn_model - INFO - 周期 12/20, 训练损失: 0.000895, 验证损失: 0.001375
+2025-05-15 19:53:37,397 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:38,992 - cnn_model - INFO - 周期 13/20, 训练损失: 0.000874, 验证损失: 0.001413
+2025-05-15 19:53:40,532 - cnn_model - INFO - 周期 14/20, 训练损失: 0.000850, 验证损失: 0.001335
+2025-05-15 19:53:40,535 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:42,047 - cnn_model - INFO - 周期 15/20, 训练损失: 0.000884, 验证损失: 0.001348
+2025-05-15 19:53:43,588 - cnn_model - INFO - 周期 16/20, 训练损失: 0.000852, 验证损失: 0.001338
+2025-05-15 19:53:45,119 - cnn_model - INFO - 周期 17/20, 训练损失: 0.000834, 验证损失: 0.001372
+2025-05-15 19:53:46,669 - cnn_model - INFO - 周期 18/20, 训练损失: 0.000825, 验证损失: 0.001331
+2025-05-15 19:53:46,672 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:48,324 - cnn_model - INFO - 周期 19/20, 训练损失: 0.000804, 验证损失: 0.001312
+2025-05-15 19:53:48,325 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:49,919 - cnn_model - INFO - 周期 20/20, 训练损失: 0.000824, 验证损失: 0.001294
+2025-05-15 19:53:49,921 - cnn_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:49,935 - cnn_model - INFO - 训练完成，已加载最佳模型
+2025-05-15 19:53:50,094 - evaluation - INFO - 模型 CNN 评估结果:
+2025-05-15 19:53:50,094 - evaluation - INFO - RMSE: 9.7063
+2025-05-15 19:53:50,094 - evaluation - INFO - MAE: 6.2307
+2025-05-15 19:53:50,094 - evaluation - INFO - R²: 0.9462
+2025-05-15 19:53:50,094 - evaluation - INFO - MAPE: 17.4453%
+2025-05-15 19:53:50,094 - evaluation - INFO - 执行时间: 34.0961 秒
+2025-05-15 19:53:50,353 - time_series - INFO - CNN模型完成，评估结果: RMSE=9.7063, MAE=6.2307
+2025-05-15 19:53:50,353 - time_series - INFO - ==================================================
+2025-05-15 19:53:50,354 - time_series - INFO - 开始CNN+LSTM模型训练和预测
+2025-05-15 19:53:50,354 - data_processor - INFO - PyTorch数据准备完成
+2025-05-15 19:53:50,355 - data_processor - INFO - 训练批次数: 609
+2025-05-15 19:53:50,355 - data_processor - INFO - 验证批次数: 87
+2025-05-15 19:53:50,355 - data_processor - INFO - 测试批次数: 174
+2025-05-15 19:53:50,360 - cnn_lstm_model - INFO - CNN+LSTM模型初始化，设备: cuda
+2025-05-15 19:53:50,360 - cnn_lstm_model - INFO - 模型结构: 输入通道=1, 序列长度=7, LSTM隐藏大小=64
+2025-05-15 19:53:50,361 - cnn_lstm_model - INFO - 开始训练CNN+LSTM模型，总共20个周期
+2025-05-15 19:53:52,344 - cnn_lstm_model - INFO - 周期 1/20, 训练损失: 0.002830, 验证损失: 0.002148
+2025-05-15 19:53:52,351 - cnn_lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:54,331 - cnn_lstm_model - INFO - 周期 2/20, 训练损失: 0.001258, 验证损失: 0.001712
+2025-05-15 19:53:54,333 - cnn_lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:56,232 - cnn_lstm_model - INFO - 周期 3/20, 训练损失: 0.001068, 验证损失: 0.001596
+2025-05-15 19:53:56,233 - cnn_lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:53:58,160 - cnn_lstm_model - INFO - 周期 4/20, 训练损失: 0.000950, 验证损失: 0.001456
+2025-05-15 19:53:58,163 - cnn_lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:54:00,088 - cnn_lstm_model - INFO - 周期 5/20, 训练损失: 0.000891, 验证损失: 0.001455
+2025-05-15 19:54:00,090 - cnn_lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:54:02,040 - cnn_lstm_model - INFO - 周期 6/20, 训练损失: 0.000889, 验证损失: 0.001484
+2025-05-15 19:54:03,932 - cnn_lstm_model - INFO - 周期 7/20, 训练损失: 0.000873, 验证损失: 0.001442
+2025-05-15 19:54:03,934 - cnn_lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:54:05,907 - cnn_lstm_model - INFO - 周期 8/20, 训练损失: 0.000849, 验证损失: 0.001425
+2025-05-15 19:54:05,910 - cnn_lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:54:07,899 - cnn_lstm_model - INFO - 周期 9/20, 训练损失: 0.000842, 验证损失: 0.001333
+2025-05-15 19:54:07,901 - cnn_lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:54:09,766 - cnn_lstm_model - INFO - 周期 10/20, 训练损失: 0.000825, 验证损失: 0.001477
+2025-05-15 19:54:11,743 - cnn_lstm_model - INFO - 周期 11/20, 训练损失: 0.000831, 验证损失: 0.001269
+2025-05-15 19:54:11,745 - cnn_lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:54:13,781 - cnn_lstm_model - INFO - 周期 12/20, 训练损失: 0.000819, 验证损失: 0.001301
+2025-05-15 19:54:15,693 - cnn_lstm_model - INFO - 周期 13/20, 训练损失: 0.000811, 验证损失: 0.001347
+2025-05-15 19:54:17,598 - cnn_lstm_model - INFO - 周期 14/20, 训练损失: 0.000801, 验证损失: 0.001200
+2025-05-15 19:54:17,600 - cnn_lstm_model - INFO - 模型改进，已保存最佳模型
+2025-05-15 19:54:19,620 - cnn_lstm_model - INFO - 周期 15/20, 训练损失: 0.000797, 验证损失: 0.001219
+2025-05-15 19:54:21,591 - cnn_lstm_model - INFO - 周期 16/20, 训练损失: 0.000799, 验证损失: 0.001278
+2025-05-15 19:54:23,532 - cnn_lstm_model - INFO - 周期 17/20, 训练损失: 0.000810, 验证损失: 0.001296
+2025-05-15 19:54:25,478 - cnn_lstm_model - INFO - 周期 18/20, 训练损失: 0.000798, 验证损失: 0.001231
+2025-05-15 19:54:27,426 - cnn_lstm_model - INFO - 周期 19/20, 训练损失: 0.000786, 验证损失: 0.001340
+2025-05-15 19:54:29,406 - cnn_lstm_model - INFO - 周期 20/20, 训练损失: 0.000778, 验证损失: 0.001226
+2025-05-15 19:54:29,421 - cnn_lstm_model - INFO - 训练完成，已加载最佳模型
+2025-05-15 19:54:29,644 - evaluation - INFO - 模型 CNN+LSTM 评估结果:
+2025-05-15 19:54:29,644 - evaluation - INFO - RMSE: 9.5150
+2025-05-15 19:54:29,645 - evaluation - INFO - MAE: 5.6044
+2025-05-15 19:54:29,645 - evaluation - INFO - R²: 0.9483
+2025-05-15 19:54:29,645 - evaluation - INFO - MAPE: 14.0321%
+2025-05-15 19:54:29,645 - evaluation - INFO - 执行时间: 39.0604 秒
+2025-05-15 19:54:29,889 - time_series - INFO - CNN+LSTM模型完成，评估结果: RMSE=9.5150, MAE=5.6044
+2025-05-15 19:54:29,891 - time_series - INFO - ==================================================
+2025-05-15 19:54:29,891 - time_series - INFO - 开始Sklearn模型训练和预测
+2025-05-15 19:54:29,891 - data_processor - INFO - Sklearn数据准备完成
+2025-05-15 19:54:29,891 - data_processor - INFO - 重塑后的训练数据形状: (19464, 7)
+2025-05-15 19:54:29,892 - data_processor - INFO - 重塑后的验证数据形状: (2780, 7)
+2025-05-15 19:54:29,892 - data_processor - INFO - 重塑后的测试数据形状: (5563, 7)
+2025-05-15 19:54:29,892 - sklearn_models - INFO - 初始化Sklearn模型集合
+2025-05-15 19:54:29,892 - time_series - INFO - ------------------------------
+2025-05-15 19:54:29,893 - time_series - INFO - 训练线性回归模型
+2025-05-15 19:54:29,893 - sklearn_models - INFO - 训练线性回归模型
+2025-05-15 19:54:29,915 - sklearn_models - INFO - 线性回归模型验证R²得分: 0.8776
+2025-05-15 19:54:29,915 - sklearn_models - INFO - 使用 linear_regression 模型进行预测
+2025-05-15 19:54:29,917 - evaluation - INFO - 模型 线性回归 评估结果:
+2025-05-15 19:54:29,918 - evaluation - INFO - RMSE: 8.8401
+2025-05-15 19:54:29,918 - evaluation - INFO - MAE: 5.1610
+2025-05-15 19:54:29,918 - evaluation - INFO - R²: 0.9554
+2025-05-15 19:54:29,918 - evaluation - INFO - MAPE: 12.8423%
+2025-05-15 19:54:29,919 - evaluation - INFO - 执行时间: 0.0219 秒
+2025-05-15 19:54:30,165 - time_series - INFO - ------------------------------
+2025-05-15 19:54:30,165 - time_series - INFO - 训练决策树模型
+2025-05-15 19:54:30,165 - sklearn_models - INFO - 训练决策树模型，参数: {'max_depth': 10, 'random_state': 42}
+2025-05-15 19:54:30,237 - sklearn_models - INFO - 决策树模型验证R²得分: 0.8601
+2025-05-15 19:54:30,237 - sklearn_models - INFO - 使用 decision_tree 模型进行预测
+2025-05-15 19:54:30,241 - evaluation - INFO - 模型 决策树 评估结果:
+2025-05-15 19:54:30,241 - evaluation - INFO - RMSE: 9.4953
+2025-05-15 19:54:30,241 - evaluation - INFO - MAE: 5.3617
+2025-05-15 19:54:30,241 - evaluation - INFO - R²: 0.9485
+2025-05-15 19:54:30,242 - evaluation - INFO - MAPE: 12.6134%
+2025-05-15 19:54:30,242 - evaluation - INFO - 执行时间: 0.0725 秒
+2025-05-15 19:54:30,483 - time_series - INFO - ------------------------------
+2025-05-15 19:54:30,483 - time_series - INFO - 训练随机森林模型
+2025-05-15 19:54:30,484 - sklearn_models - INFO - 训练随机森林模型，参数: {'n_estimators': 100, 'max_depth': 10, 'random_state': 42}
+2025-05-15 19:54:34,354 - sklearn_models - INFO - 随机森林模型验证R²得分: 0.8886
+2025-05-15 19:54:34,355 - sklearn_models - INFO - 使用 random_forest 模型进行预测
+2025-05-15 19:54:34,398 - evaluation - INFO - 模型 随机森林 评估结果:
+2025-05-15 19:54:34,399 - evaluation - INFO - RMSE: 8.7157
+2025-05-15 19:54:34,399 - evaluation - INFO - MAE: 4.9895
+2025-05-15 19:54:34,399 - evaluation - INFO - R²: 0.9566
+2025-05-15 19:54:34,399 - evaluation - INFO - MAPE: 12.2481%
+2025-05-15 19:54:34,399 - evaluation - INFO - 执行时间: 3.8711 秒
+2025-05-15 19:54:34,656 - time_series - INFO - ------------------------------
+2025-05-15 19:54:34,656 - time_series - INFO - 训练XGBoost模型
+2025-05-15 19:54:34,656 - sklearn_models - INFO - 训练XGBoost模型，参数: {'n_estimators': 100, 'max_depth': 6, 'learning_rate': 0.1, 'objective': 'reg:squarederror', 'random_state': 42}
+2025-05-15 19:54:34,880 - sklearn_models - INFO - XGBoost模型验证R²得分: 0.8776
+2025-05-15 19:54:34,880 - sklearn_models - INFO - 使用 xgboost 模型进行预测
+2025-05-15 19:54:34,885 - evaluation - INFO - 模型 XGBoost 评估结果:
+2025-05-15 19:54:34,886 - evaluation - INFO - RMSE: 8.7086
+2025-05-15 19:54:34,886 - evaluation - INFO - MAE: 4.9935
+2025-05-15 19:54:34,886 - evaluation - INFO - R²: 0.9567
+2025-05-15 19:54:34,886 - evaluation - INFO - MAPE: 12.2249%
+2025-05-15 19:54:34,887 - evaluation - INFO - 执行时间: 0.2241 秒
+2025-05-15 19:54:35,184 - time_series - INFO - ------------------------------
+2025-05-15 19:54:35,185 - time_series - INFO - 训练SVM模型
+2025-05-15 19:54:35,185 - sklearn_models - INFO - 训练SVM模型，参数: {'kernel': 'rbf', 'C': 1.0, 'epsilon': 0.1}
+2025-05-15 19:54:35,695 - sklearn_models - INFO - SVM模型验证R²得分: 0.7728
+2025-05-15 19:54:35,695 - sklearn_models - INFO - 使用 svm 模型进行预测
+2025-05-15 19:54:35,808 - evaluation - INFO - 模型 SVM 评估结果:
+2025-05-15 19:54:35,808 - evaluation - INFO - RMSE: 21.3378
+2025-05-15 19:54:35,809 - evaluation - INFO - MAE: 18.0252
+2025-05-15 19:54:35,809 - evaluation - INFO - R²: 0.7402
+2025-05-15 19:54:35,809 - evaluation - INFO - MAPE: 67.9728%
+2025-05-15 19:54:35,809 - evaluation - INFO - 执行时间: 0.5106 秒
+2025-05-15 19:54:36,052 - time_series - INFO - ------------------------------
+2025-05-15 19:54:36,052 - time_series - INFO - 训练梯度提升树模型
+2025-05-15 19:54:36,052 - sklearn_models - INFO - 训练Gradient Boosting模型，参数: {'n_estimators': 100, 'learning_rate': 0.1, 'max_depth': 3, 'random_state': 42}
+2025-05-15 19:54:37,886 - sklearn_models - INFO - Gradient Boosting模型验证R²得分: 0.8632
+2025-05-15 19:54:37,887 - sklearn_models - INFO - 使用 gradient_boosting 模型进行预测
+2025-05-15 19:54:37,893 - evaluation - INFO - 模型 梯度提升树 评估结果:
+2025-05-15 19:54:37,893 - evaluation - INFO - RMSE: 8.7235
+2025-05-15 19:54:37,893 - evaluation - INFO - MAE: 5.1766
+2025-05-15 19:54:37,893 - evaluation - INFO - R²: 0.9566
+2025-05-15 19:54:37,893 - evaluation - INFO - MAPE: 13.0284%
+2025-05-15 19:54:37,894 - evaluation - INFO - 执行时间: 1.8337 秒
+2025-05-15 19:54:38,145 - time_series - INFO - ------------------------------
+2025-05-15 19:54:38,146 - time_series - INFO - 训练LightGBM模型
+2025-05-15 19:54:38,146 - sklearn_models - INFO - 训练LightGBM模型，参数: {'n_estimators': 100, 'learning_rate': 0.1, 'max_depth': -1, 'random_state': 42, 'verbose': -1}
+2025-05-15 19:54:38,410 - sklearn_models - INFO - LightGBM模型验证R²得分: 0.8872
+2025-05-15 19:54:38,411 - sklearn_models - INFO - 使用 lightgbm 模型进行预测
+2025-05-15 19:54:38,421 - evaluation - INFO - 模型 LightGBM 评估结果:
+2025-05-15 19:54:38,422 - evaluation - INFO - RMSE: 8.8139
+2025-05-15 19:54:38,422 - evaluation - INFO - MAE: 5.0413
+2025-05-15 19:54:38,423 - evaluation - INFO - R²: 0.9557
+2025-05-15 19:54:38,423 - evaluation - INFO - MAPE: 12.3964%
+2025-05-15 19:54:38,423 - evaluation - INFO - 执行时间: 0.2656 秒
+2025-05-15 19:54:38,688 - time_series - INFO - ------------------------------
+2025-05-15 19:54:38,689 - time_series - INFO - 训练CatBoost模型
+2025-05-15 19:54:38,689 - sklearn_models - INFO - 训练CatBoost模型，参数: {'iterations': 100, 'learning_rate': 0.1, 'depth': 6, 'random_state': 42, 'verbose': 0}
+2025-05-15 19:54:39,612 - sklearn_models - INFO - CatBoost模型验证R²得分: 0.8789
+2025-05-15 19:54:39,613 - sklearn_models - INFO - 使用 catboost 模型进行预测
+2025-05-15 19:54:39,629 - evaluation - INFO - 模型 CatBoost 评估结果:
+2025-05-15 19:54:39,629 - evaluation - INFO - RMSE: 8.9734
+2025-05-15 19:54:39,629 - evaluation - INFO - MAE: 5.3235
+2025-05-15 19:54:39,629 - evaluation - INFO - R²: 0.9540
+2025-05-15 19:54:39,630 - evaluation - INFO - MAPE: 13.4418%
+2025-05-15 19:54:39,630 - evaluation - INFO - 执行时间: 0.9235 秒
+2025-05-15 19:54:39,879 - time_series - INFO - 所有Sklearn模型训练完成
+2025-05-15 19:54:39,882 - time_series - INFO - ==================================================
+2025-05-15 19:54:39,882 - time_series - INFO - 开始ARIMA模型训练和预测
+2025-05-15 19:54:39,883 - time_series - ERROR - 运行ARIMA模型时发生错误: 'TimeSeriesDataProcessor' object has no attribute 'data_dict'
+2025-05-15 19:54:39,883 - time_series - INFO - ==================================================
+2025-05-15 19:54:39,883 - time_series - INFO - 开始Prophet模型训练和预测
+2025-05-15 19:54:39,884 - time_series - WARNING - Prophet模型：未找到明确的 '日期' 列，将尝试使用索引生成日期。
+2025-05-15 19:54:39,884 - time_series - INFO - Prophet模型：将使用第一列 'date' 作为日期列。
+2025-05-15 19:54:39,906 - time_series - ERROR - 运行Prophet模型时发生错误: 'TimeSeriesDataProcessor' object has no attribute 'data_dict'
+2025-05-15 19:54:39,906 - time_series - INFO - ==================================================
+2025-05-15 19:54:39,906 - time_series - INFO - 开始Transformer模型训练和预测
+2025-05-15 19:54:39,907 - data_processor - INFO - PyTorch数据准备完成
+2025-05-15 19:54:39,907 - data_processor - INFO - 训练批次数: 609
+2025-05-15 19:54:39,908 - data_processor - INFO - 验证批次数: 87
+2025-05-15 19:54:39,908 - data_processor - INFO - 测试批次数: 174
+2025-05-15 19:54:39,952 - transformer_model - INFO - TransformerModel initialized on cuda
+2025-05-15 19:54:39,953 - transformer_model - INFO - Model params: input_size=1, d_model=64, nhead=4, layers=2, ff_dim=128, output_size=1, seq_len=7
+2025-05-15 19:54:39,953 - transformer_model - INFO - Starting Transformer training for 20 epochs.
+2025-05-15 19:54:45,822 - transformer_model - INFO - Epoch 1/20, Train Loss: 0.0147, Val Loss: 0.0086
+2025-05-15 19:54:45,822 - transformer_model - INFO - New best validation loss: 0.0086. Saving model state.
+2025-05-15 19:54:51,464 - transformer_model - INFO - Epoch 2/20, Train Loss: 0.0115, Val Loss: 0.0096
+2025-05-15 19:54:57,065 - transformer_model - INFO - Epoch 3/20, Train Loss: 0.0114, Val Loss: 0.0098
+2025-05-15 19:55:03,026 - transformer_model - INFO - Epoch 4/20, Train Loss: 0.0113, Val Loss: 0.0099
+2025-05-15 19:55:08,820 - transformer_model - INFO - Epoch 5/20, Train Loss: 0.0113, Val Loss: 0.0089
+2025-05-15 19:55:14,598 - transformer_model - INFO - Epoch 6/20, Train Loss: 0.0113, Val Loss: 0.0086
+2025-05-15 19:55:20,215 - transformer_model - INFO - Epoch 7/20, Train Loss: 0.0112, Val Loss: 0.0088
+2025-05-15 19:55:25,941 - transformer_model - INFO - Epoch 8/20, Train Loss: 0.0112, Val Loss: 0.0101
+2025-05-15 19:55:31,684 - transformer_model - INFO - Epoch 9/20, Train Loss: 0.0112, Val Loss: 0.0086
+2025-05-15 19:55:37,475 - transformer_model - INFO - Epoch 10/20, Train Loss: 0.0112, Val Loss: 0.0087
+2025-05-15 19:55:43,350 - transformer_model - INFO - Epoch 11/20, Train Loss: 0.0112, Val Loss: 0.0087
+2025-05-15 19:55:49,509 - transformer_model - INFO - Epoch 12/20, Train Loss: 0.0111, Val Loss: 0.0088
+2025-05-15 19:55:55,143 - transformer_model - INFO - Epoch 13/20, Train Loss: 0.0112, Val Loss: 0.0086
+2025-05-15 19:56:01,149 - transformer_model - INFO - Epoch 14/20, Train Loss: 0.0112, Val Loss: 0.0088
+2025-05-15 19:56:08,325 - transformer_model - INFO - Epoch 15/20, Train Loss: 0.0112, Val Loss: 0.0092
+2025-05-15 19:56:14,634 - transformer_model - INFO - Epoch 16/20, Train Loss: 0.0111, Val Loss: 0.0093
+2025-05-15 19:56:20,604 - transformer_model - INFO - Epoch 17/20, Train Loss: 0.0111, Val Loss: 0.0091
+2025-05-15 19:56:26,891 - transformer_model - INFO - Epoch 18/20, Train Loss: 0.0112, Val Loss: 0.0087
+2025-05-15 19:56:33,119 - transformer_model - INFO - Epoch 19/20, Train Loss: 0.0111, Val Loss: 0.0089
+2025-05-15 19:56:39,522 - transformer_model - INFO - Epoch 20/20, Train Loss: 0.0111, Val Loss: 0.0086
+2025-05-15 19:56:39,523 - transformer_model - INFO - Loaded best model state for Transformer.
+2025-05-15 19:56:39,836 - evaluation - INFO - 模型 Transformer 评估结果:
+2025-05-15 19:56:39,836 - evaluation - INFO - RMSE: 45.3168
+2025-05-15 19:56:39,837 - evaluation - INFO - MAE: 37.8293
+2025-05-15 19:56:39,837 - evaluation - INFO - R²: -0.1720
+2025-05-15 19:56:39,837 - evaluation - INFO - MAPE: 122.4136%
+2025-05-15 19:56:39,837 - evaluation - INFO - 执行时间: 119.5710 秒
+2025-05-15 19:56:40,104 - time_series - INFO - Transformer模型完成，评估结果: RMSE=45.3168, MAE=37.8293, R2=-0.1720
+2025-05-15 19:56:40,104 - time_series - INFO - ==================================================
+2025-05-15 19:56:40,104 - time_series - INFO - 开始CNN-LSTM-Attention模型训练和预测
+2025-05-15 19:56:40,105 - data_processor - INFO - PyTorch数据准备完成
+2025-05-15 19:56:40,105 - data_processor - INFO - 训练批次数: 609
+2025-05-15 19:56:40,105 - data_processor - INFO - 验证批次数: 87
+2025-05-15 19:56:40,107 - data_processor - INFO - 测试批次数: 174
+2025-05-15 19:56:40,110 - cnn_lstm_attention_model - INFO - CNNLSTMAttentionModel initialized on cuda
+2025-05-15 19:56:40,110 - cnn_lstm_attention_model - INFO - Model params: input_channels=1, seq_length=7, lstm_hidden=64, cnn_out=32
+2025-05-15 19:56:40,111 - cnn_lstm_attention_model - INFO - Starting CNN-LSTM-Attention training for 20 epochs.
+2025-05-15 19:56:42,924 - cnn_lstm_attention_model - INFO - Epoch 1/20, Train Loss: 0.0115, Val Loss: 0.0085
+2025-05-15 19:56:42,925 - cnn_lstm_attention_model - INFO - New best validation loss: 0.0085. Saving model state.
+2025-05-15 19:56:45,571 - cnn_lstm_attention_model - INFO - Epoch 2/20, Train Loss: 0.0111, Val Loss: 0.0085
+2025-05-15 19:56:45,572 - cnn_lstm_attention_model - INFO - New best validation loss: 0.0085. Saving model state.
+2025-05-15 19:56:48,268 - cnn_lstm_attention_model - INFO - Epoch 3/20, Train Loss: 0.0111, Val Loss: 0.0092
+2025-05-15 19:56:51,022 - cnn_lstm_attention_model - INFO - Epoch 4/20, Train Loss: 0.0111, Val Loss: 0.0088
+2025-05-15 19:56:53,680 - cnn_lstm_attention_model - INFO - Epoch 5/20, Train Loss: 0.0111, Val Loss: 0.0092
+2025-05-15 19:56:56,503 - cnn_lstm_attention_model - INFO - Epoch 6/20, Train Loss: 0.0111, Val Loss: 0.0087
+2025-05-15 19:56:59,255 - cnn_lstm_attention_model - INFO - Epoch 7/20, Train Loss: 0.0111, Val Loss: 0.0091
+2025-05-15 19:57:02,473 - cnn_lstm_attention_model - INFO - Epoch 8/20, Train Loss: 0.0111, Val Loss: 0.0088
+2025-05-15 19:57:05,341 - cnn_lstm_attention_model - INFO - Epoch 9/20, Train Loss: 0.0111, Val Loss: 0.0089
+2025-05-15 19:57:08,158 - cnn_lstm_attention_model - INFO - Epoch 10/20, Train Loss: 0.0111, Val Loss: 0.0090
+2025-05-15 19:57:10,817 - cnn_lstm_attention_model - INFO - Epoch 11/20, Train Loss: 0.0111, Val Loss: 0.0085
+2025-05-15 19:57:10,817 - cnn_lstm_attention_model - INFO - New best validation loss: 0.0085. Saving model state.
+2025-05-15 19:57:13,467 - cnn_lstm_attention_model - INFO - Epoch 12/20, Train Loss: 0.0111, Val Loss: 0.0085
+2025-05-15 19:57:16,090 - cnn_lstm_attention_model - INFO - Epoch 13/20, Train Loss: 0.0111, Val Loss: 0.0088
+2025-05-15 19:57:18,813 - cnn_lstm_attention_model - INFO - Epoch 14/20, Train Loss: 0.0111, Val Loss: 0.0092
+2025-05-15 19:57:21,583 - cnn_lstm_attention_model - INFO - Epoch 15/20, Train Loss: 0.0111, Val Loss: 0.0086
+2025-05-15 19:57:24,340 - cnn_lstm_attention_model - INFO - Epoch 16/20, Train Loss: 0.0111, Val Loss: 0.0088
+2025-05-15 19:57:27,234 - cnn_lstm_attention_model - INFO - Epoch 17/20, Train Loss: 0.0111, Val Loss: 0.0088
+2025-05-15 19:57:30,190 - cnn_lstm_attention_model - INFO - Epoch 18/20, Train Loss: 0.0111, Val Loss: 0.0086
+2025-05-15 19:57:33,132 - cnn_lstm_attention_model - INFO - Epoch 19/20, Train Loss: 0.0111, Val Loss: 0.0086
+2025-05-15 19:57:36,058 - cnn_lstm_attention_model - INFO - Epoch 20/20, Train Loss: 0.0111, Val Loss: 0.0085
+2025-05-15 19:57:36,059 - cnn_lstm_attention_model - INFO - New best validation loss: 0.0085. Saving model state.
+2025-05-15 19:57:36,059 - cnn_lstm_attention_model - INFO - Loaded best model state for CNN-LSTM-Attention.
+2025-05-15 19:57:36,321 - evaluation - INFO - 模型 CNN-LSTM-Attention 评估结果:
+2025-05-15 19:57:36,321 - evaluation - INFO - RMSE: 44.7570
+2025-05-15 19:57:36,321 - evaluation - INFO - MAE: 37.6477
+2025-05-15 19:57:36,322 - evaluation - INFO - R²: -0.1432
+2025-05-15 19:57:36,322 - evaluation - INFO - MAPE: 122.6983%
+2025-05-15 19:57:36,322 - evaluation - INFO - 执行时间: 55.9497 秒
+2025-05-15 19:57:36,598 - time_series - INFO - CNN-LSTM-Attention模型完成，评估结果: RMSE=44.7570, MAE=37.6477, R2=-0.1432
+2025-05-15 19:57:37,260 - time_series - INFO - 所有有效结果已保存到 time_series/results\all_models_comparison.xlsx
+2025-05-15 19:57:37,261 - time_series - INFO - 时间序列预测系统运行完成
