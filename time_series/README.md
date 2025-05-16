@@ -1,77 +1,95 @@
-# 时间序列预测系统
 
-本项目实现了一个综合性的时间序列预测系统，用于对北京市AQI数据进行预测分析。系统包含多种预测模型，并提供了详细的评估指标和可视化结果。
+## 安装部署
 
-## 项目结构
-
-```
-time_series/
-├── models/             # 模型实现
-│   ├── lstm_model.py   # LSTM模型
-│   ├── cnn_model.py    # CNN模型
-│   ├── cnn_lstm_model.py # CNN+LSTM组合模型
-│   └── sklearn_models.py # 传统机器学习模型(随机森林、XGBoost等)
-├── preprocessing/      # 数据预处理
-│   └── data_processor.py # 数据处理器
-├── utils/              # 工具函数
-│   ├── data_utils.py   # 数据工具
-│   └── evaluation.py   # 评估工具
-├── evaluation/         # 模型评估
-├── logs/               # 运行日志
-├── results/            # 结果输出
-├── main.py             # 主程序
-├── requirements.txt    # 依赖包
-└── 北京-逐日.xlsx      # 数据集
+1. 克隆项目到本地：
+```bash
+git clone [repository-url]
+cd time_series
 ```
 
-## 支持的模型
+2. 创建并激活虚拟环境（推荐）：
+```bash
+# Windows
+python -m venv venv
+.\venv\Scripts\activate
 
-系统支持以下预测模型：
+# Linux/Mac
+python3 -m venv venv
+source venv/bin/activate
+```
 
-1. **深度学习模型**:
-   - LSTM (长短期记忆网络)
-   - CNN (卷积神经网络)
-   - CNN+LSTM (组合模型)
+3. 安装依赖：
+```bash
+pip install -r requirements.txt
+```
 
-2. **传统机器学习模型**:
-   - 线性回归
-   - 决策树
-   - 随机森林
-   - XGBoost
+4. 准备数据：
+- 将时间序列数据文件（Excel格式）放在项目根目录下
+- 数据格式要求：
+  - 必须包含"日期"列
+  - 必须包含"AQI"列
+  - Excel文件默认名称：`北京-逐日.xlsx`
+
+5. 运行程序：
+```bash
+python main.py
+```
+
+## 输出说明
+
+程序运行后会在以下目录生成结果：
+
+- `results/`：
+  - `all_models_comparison.xlsx`：所有模型的性能对比
+  - `model_comparison_plot.png`：模型性能对比图
+  - 各个模型的预测结果图
+
+- `logs/`：
+  - 详细的运行日志，包含时间戳
 
 ## 评估指标
 
 系统使用以下指标评估模型性能：
-
 - RMSE (均方根误差)
 - MAE (平均绝对误差)
 - R² (决定系数)
 - MAPE (平均绝对百分比误差)
 - 执行时间
 
-## 安装依赖
+## 自定义配置
 
-```bash
-pip install -r requirements.txt
-```
+在 `main.py` 中可以调整以下参数：
 
-## 运行方法
+- `seq_length`：时间序列长度（默认为7）
+- `batch_size`：批次大小（默认为32）
+- `epochs`：训练轮数（默认为20）
+- 各个模型的具体参数（如LSTM的隐藏层大小等）
 
-```bash
-cd time_series
-python main.py
-```
+## 注意事项
 
-## 输出结果
+1. 确保安装了所有必要的依赖包
+2. 数据文件必须符合指定格式
+3. 对于大数据集，建议使用GPU进行训练
+4. Prophet和ARIMA模型可能需要额外的系统依赖
 
-系统会在`time_series/results`目录下生成以下内容：
+## 问题排查
 
-1. 各个模型的预测曲线图
-2. 所有模型性能对比图
-3. 以Excel格式保存的完整性能评估结果
+如果遇到问题：
 
-系统还会在`time_series/logs`目录下生成详细的运行日志。
+1. 检查 `logs/` 目录下的日志文件
+2. 确保数据格式正确
+3. 检查是否所有依赖都已正确安装
+4. 对于内存不足问题，可以调小batch_size
 
-## 中文支持
+## 贡献指南
 
-系统完全支持中文，包括日志、图表标签、评估结果等。 
+欢迎提交Issue和Pull Request来改进项目。在提交PR之前，请确保：
+
+1. 代码符合PEP 8规范
+2. 添加了必要的注释
+3. 更新了相关文档
+4. 添加了必要的测试
+
+## 许可证
+
+[添加许可证信息]
